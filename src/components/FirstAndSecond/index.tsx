@@ -39,7 +39,40 @@ const First: React.FC = () => {
     [1, 0.511, 0.511, 1]
   )
 
-  return <Sticky className="first" style={{ scale: firstScale }}></Sticky>
+  const firstRadius = useTransform(
+    scrollYProgress,
+    [0.198, 0.264, 0.558, 0.627],
+    [0, 4, 4, 0]
+  )
+
+  const leftSideHeight = useTransform(
+    scrollYProgress,
+    [0, 0.058],
+    ['20vh', '100vh']
+  )
+
+  return (
+    <Sticky
+      className="first"
+      style={{
+        scale: firstScale,
+        borderRadius: firstRadius,
+      }}
+    >
+      <div className="a">
+        <motion.div
+          className="left-side"
+          style={{
+            height: leftSideHeight
+          }}
+        />
+      </div>
+
+      <div className="b"></div>
+
+      <div className="c"></div>
+    </Sticky>
+  )
 }
 
 export default FirstAndSecond

@@ -11,6 +11,26 @@ export const Main = styled.main`
 
     .a {
       background: #f5f1ea;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+
+      .left-side {
+        height: 100%;
+        width: 50%;
+        background: #7db591;
+      }
+
+      .right-side {
+        width: 50%;
+        height: 100%;
+
+        .right-image {
+          background: #7db591;
+          width: 100%;
+          height: 100%;
+        }
+      }
     }
     .b {
       background: #582534;

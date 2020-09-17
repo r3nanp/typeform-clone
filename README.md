@@ -1,3 +1,5 @@
+<img align="center" src="./.github/front.gif">
+
 # TypeForm Clone
 A clone of Typeform animation using Framer Motion and React.<br/>
 
@@ -34,5 +36,3 @@ yarn start or npm start
 <!-- ### Link
 [Website]() -->
 
-<!-- ### Screenshots
-  <img src="./.github/desktopscreenshot.gif"> -->

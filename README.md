@@ -1,4 +1,6 @@
-<img align="center" src="./.github/front.gif">
+<div align="center">
+  <img src="./.github/front.gif">
+</div>
 
 # TypeForm Clone
 A clone of Typeform animation using Framer Motion and React.<br/>

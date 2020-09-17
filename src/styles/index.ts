@@ -7,6 +7,8 @@ export const Main = styled.main`
     overflow: hidden;
 
     .offset {
+      width: 100%;
+      height: 100%;
     }
 
     .a {
@@ -32,11 +34,17 @@ export const Main = styled.main`
         }
       }
     }
+
     .b {
       background: #582534;
+      width: 100%;
+      height: 100%;
     }
+
     .c {
       background: #0a7397;
+      width: 100%;
+      height: 100%;
     }
   }
 

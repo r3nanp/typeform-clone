@@ -51,6 +51,24 @@ const First: React.FC = () => {
     ['20vh', '100vh']
   )
 
+  const rightSideScale = useTransform(
+    scrollYProgress,
+    [0.047, 0.093],
+    [0, 0.511]
+  )
+
+  const rightSideY = useTransform(
+    scrollYProgress,
+    [0.047, 0.093],
+    ['58vh', '0vh']
+  )
+
+  const offsetY = useTransform(
+    scrollYProgress,
+    [0.328, 0.397, 0.461, 0.53],
+    ['0%', '-100%', '-100%', '-200%']
+  )
+
   return (
     <Sticky
       className="first"
@@ -59,18 +77,32 @@ const First: React.FC = () => {
         borderRadius: firstRadius,
       }}
     >
-      <div className="a">
-        <motion.div
-          className="left-side"
-          style={{
-            height: leftSideHeight
-          }}
-        />
-      </div>
+      <motion.div className="offset" style={{
+        y: offsetY,
+      }}>
+        <div className="a">
+          <motion.div
+            className="left-side"
+            style={{
+              height: leftSideHeight,
+            }}
+          />
 
-      <div className="b"></div>
+          <div className="right-side">
+            <motion.div
+              className="right-image"
+              style={{
+                y: rightSideY,
+                scale: rightSideScale,
+              }}
+            />
+          </div>
+        </div>
 
-      <div className="c"></div>
+        <div className="b"></div>
+
+        <div className="c"></div>
+      </motion.div>
     </Sticky>
   )
 }
